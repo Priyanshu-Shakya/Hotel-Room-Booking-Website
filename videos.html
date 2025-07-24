@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hotel Video Showcase | PSparks</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="css/videos.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <div class="background-blur"></div>
+<!-- navbar -->
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-transparent fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">PSparks</a>
+        <button
+          class="navbar-toggler text-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <!-- <li class="nav-item"><a class="nav-link" href="#">About Us</a></li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#footer2">Contact Us</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Hotels</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="coupens.html">Coupon & Deals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+  <div class="container py-5">
+    <h1 class="text-center mb-4">Explore Our Hotel with Video Tours </h1>
+
+    <!-- Category Tabs -->
+    <div class="text-center mb-4">
+      <button class="btn btn-outline-primary mx-2 category-btn active" data-cat="rooms">Rooms</button>
+      <button class="btn btn-outline-primary mx-2 category-btn" data-cat="amenities">Amenities</button>
+      <button class="btn btn-outline-primary mx-2 category-btn" data-cat="dining">Dining</button>
+      <button class="btn btn-outline-primary mx-2 category-btn" data-cat="events">Events</button>
+    </div>
+
+    <!-- Video Gallery -->
+    <div class="row g-4" id="videoGallery">
+      <!--! Video Card: Rooms -->
+<!-- ✅ Each video has its own wrapper with correct category -->
+<div class="col-md-4 video-item" data-cat="rooms" data-video-path="videos/room1.mp4">
+  <div class="video-card">
+    <video src="videos/room1.mp4" muted preload="metadata" poster="videos/roomthumb1.png"></video>
+    <div class="play-icon">
+    <i class="bi bi-play-circle-fill"></i>
+  </div>
+    <div class="p-2">
+      <h6>Entertainment & Furniture</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="rooms" data-video-path="videos/room2.mp4">
+  <div class="video-card">
+    <video src="videos/room2.mp4" muted preload="metadata" poster="videos/roomthumb2.png"></video>
+    <div class="play-icon">
+    <i class="bi bi-play-circle-fill"></i>
+  </div>
+    <div class="p-2">
+      <h6>Comfort & Climate</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="rooms" data-video-path="videos/room3.mp4">
+  <div class="video-card">
+    <video src="videos/room3.mp4" muted preload="metadata" poster="videos/roomthumb3.png"></video>
+    <div class="play-icon">
+    <i class="bi bi-play-circle-fill"></i>
+  </div>
+    <div class="p-2">
+      <h6>Safe Locker </h6>
+    </div>
+  </div>
+</div>
+<div class="col-md-4 video-item" data-cat="rooms" data-video-path="videos/room4.mp4">
+  <div class="video-card">
+    <video src="videos/room4.mp4" muted preload="metadata" poster="videos/roomthumb4.png"></video>
+    <div class="play-icon">
+    <i class="bi bi-play-circle-fill"></i>
+  </div>
+    <div class="p-2">
+      <h6>Bed & Bedding</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="rooms" data-video-path="videos/room5.mp4">
+  <div class="video-card">
+    <video src="videos/room5.mp4" muted preload="metadata" poster="videos/roomthumb5.png"></video>
+    <div class="play-icon">
+    <i class="bi bi-play-circle-fill"></i>
+  </div>
+    <div class="p-2">
+      <h6>HouseKeeping & Services</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="rooms" data-video-path="videos/room6.mp4">
+  <div class="video-card">
+    <video src="videos/room6.mp4" muted preload="metadata" poster="videos/roomthumb6.png"></video>
+    <div class="play-icon">
+    <i class="bi bi-play-circle-fill"></i>
+  </div>
+    <div class="p-2">
+      <h6>Feels Like Home</h6>
+    </div>
+  </div>
+</div>
+
+      
+        <!--! Video Card: Amenities -->
+
+<div class="col-md-4 video-item" data-cat="amenities" data-video-path="videos/ama1.mp4">
+  <div class="video-card">
+    <video src="videos/ama1.mp4" muted preload="metadata" poster="videos/amathumb1.png"></video>
+    <div class="play-icon">
+    <i class="bi bi-play-circle-fill"></i>
+  </div>
+    <div class="p-2">
+      <h6>Island Side View</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="amenities" data-video-path="videos/ama2.mp4">
+  <div class="video-card">
+    <video src="videos/ama2.mp4" muted preload="metadata" poster="videos/amathumb2.png
+    "></video>
+    <div class="play-icon">
+    <i class="bi bi-play-circle-fill"></i>
+  </div>
+    <div class="p-2">
+      <h6>Spa & Wellness</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="amenities" data-video-path="videos/ama3.mp4">
+  <div class="video-card">
+    <video src="videos/ama3.mp4" muted preload="metadata" poster="videos/amathumb3.png"></video>
+    <div class="play-icon">
+    <i class="bi bi-play-circle-fill"></i>
+  </div>
+    <div class="p-2">
+      <h6>Swimming Pool</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="amenities" data-video-path="videos/ama4.mp4">
+  <div class="video-card">
+    <video src="videos/ama4.mp4" muted preload="metadata" poster="videos/amathumb4.png"></video>
+    <div class="play-icon">
+    <i class="bi bi-play-circle-fill"></i>
+  </div>
+    <div class="p-2">
+      <h6>Sea View</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="amenities" data-video-path="videos/ama5.mp4">
+  <div class="video-card">
+    <video src="videos/ama5.mp4" muted preload="metadata" poster="videos/amathumb5.png"></video>
+    <div class="play-icon">
+    <i class="bi bi-play-circle-fill"></i>
+  </div>
+    <div class="p-2">
+      <h6>Beach View </h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="amenities" data-video-path="videos/ama6.mp4">
+  <div class="video-card">
+    <video src="videos/ama6.mp4" muted preload="metadata" poster="videos/amathumb6.png"></video>
+    <div class="play-icon">
+    <i class="bi bi-play-circle-fill"></i>
+  </div>
+    <div class="p-2">
+      <h6>Full Resorta Island</h6>
+    </div>
+  </div>
+</div>
+
+        <!--! Video Card: Dining -->
+<div class="col-md-4 video-item" data-cat="dining" data-video-path="videos/dining1.mp4">
+  <div class="video-card">
+    <video src="videos/dining1.mp4" muted preload="metadata" poster="videos/diningthumb1.png"></video>
+    <div class="play-icon">
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+    <div class="p-2">
+      <h6>Gourmet Poolside Dining</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="dining" data-video-path="videos/dining2.mp4">
+  <div class="video-card">
+    <video src="videos/dining2.mp4" muted preload="metadata" poster="videos/diningthumb2.png"></video>
+    <div class="play-icon">
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+    <div class="p-2">
+      <h6>Wellness Smoothie Corner</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="dining" data-video-path="videos/dining3.mp4">
+  <div class="video-card">
+    <video src="videos/dining3.mp4" muted preload="metadata" poster="videos/diningthumb3.png"></video>
+    <div class="play-icon">
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+    <div class="p-2">
+      <h6>Protein Café & Juice Bar</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="dining" data-video-path="videos/dining4.mp4">
+  <div class="video-card">
+    <video src="videos/dining4.mp4" muted preload="metadata" poster="videos/diningthumb4.png"></video>
+    <div class="play-icon">
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+    <div class="p-2">
+      <h6>Al Fresco Sunset Dining</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="dining" data-video-path="videos/dining5.mp4">
+  <div class="video-card">
+    <video src="videos/dining5.mp4" muted preload="metadata" poster="videos/diningthumb5.png"></video>
+    <div class="play-icon">
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+    <div class="p-2">
+      <h6>Luxury Spa Brunch Bar</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="dining" data-video-path="videos/dining6.mp4">
+  <div class="video-card">
+    <video src="videos/dining6.mp4" muted preload="metadata" poster="videos/diningthumb6.png"></video>
+    <div class="play-icon">
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+    <div class="p-2">
+      <h6>Fine Dining Lounge Walkthrough</h6>
+    </div>
+  </div>
+</div>
+
+
+        <!--! Video Card: Events -->
+
+<div class="col-md-4 video-item" data-cat="events" data-video-path="videos/event1.mp4">
+  <div class="video-card">
+    <video src="videos/event1.mp4" muted preload="metadata" poster="videos/eventthumb1.png"></video>
+    <div class="play-icon">
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+    <div class="p-2">
+      <h6>Poolside Wedding Celebration</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="events" data-video-path="videos/event2.mp4">
+  <div class="video-card">
+    <video src="videos/event2.mp4" muted preload="metadata" poster="videos/eventthumb2.png"></video>
+    <div class="play-icon">
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+    <div class="p-2">
+      <h6>Birthday Bash Setup</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="events" data-video-path="videos/event3.mp4">
+  <div class="video-card">
+    <video src="videos/event3.mp4" muted preload="metadata" poster="videos/eventthumb3.png"></video>
+    <div class="play-icon">
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+    <div class="p-2">
+      <h6>Engagement Function Venue</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="events" data-video-path="videos/event4.mp4">
+  <div class="video-card">
+    <video src="videos/event4.mp4" muted preload="metadata" poster="videos/eventthumb4.png"></video>
+    <div class="play-icon">
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+    <div class="p-2">
+      <h6>Romantic Rooftop Dinner</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="events" data-video-path="videos/event5.mp4">
+  <div class="video-card">
+    <video src="videos/event5.mp4" muted preload="metadata" poster="videos/eventthumb5.png"></video>
+    <div class="play-icon">
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+    <div class="p-2">
+      <h6>Corporate Luncheon Setup</h6>
+    </div>
+  </div>
+</div>
+
+<div class="col-md-4 video-item" data-cat="events" data-video-path="videos/event6.mp4">
+  <div class="video-card">
+    <video src="videos/event6.mp4" muted preload="metadata" poster="videos/eventthumb6.png"></video>
+    <div class="play-icon">
+      <i class="bi bi-play-circle-fill"></i>
+    </div>
+    <div class="p-2">
+      <h6>Grand Anniversary Gala Tour</h6>
+    </div>
+  </div>
+</div>
+
+
+
+
+      <!-- Add more categories & videos similarly -->
+    </div>
+  </div>
+
+  <!-- Video Modal -->
+  <div class="modal fade" id="videoModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content bg-dark text-light">
+        <div class="modal-header border-0">
+          <h5 class="modal-title"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body p-0">
+          <video id="modalVideo" controls autoplay style="width: 100%; border-radius: 8px;"></video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonial Carousel -->
+<div class="container my-5">
+  <div class="testimonial-section rounded-4 shadow p-4 position-relative overflow-hidden">
+    <div class="blur-bg"></div>
+    <h3 class="text-center mb-4">What Our Guests Say</h3>
+    <div class="testimonial-carousel d-flex gap-4 overflow-x-auto">
+      <div class="testimonial-box bg-white p-3 rounded shadow-sm min-width-300">
+        <div class="stars text-warning mb-2">★★★★☆</div>
+        <p>"Uncomparable and Unbeatable Service Provides to us ."</p>
+        <strong>– Tanmay K.</strong>
+      </div>
+      <div class="testimonial-box bg-white p-3 rounded shadow-sm min-width-300">
+        <div class="stars text-warning mb-2">★★★★★</div>
+        <p>"Amazing service and stunning view! Will visit again."</p>
+        <strong>– Priya S.</strong>
+      </div>
+      <div class="testimonial-box bg-white p-3 rounded shadow-sm min-width-300">
+        <div class="stars text-warning mb-2">★★★★☆</div>
+        <p>"Clean rooms and great amenities."</p>
+        <strong>– Rahul K.</strong>
+      </div>
+      <div class="testimonial-box bg-white p-3 rounded shadow-sm min-width-300">
+        <div class="stars text-warning mb-2">★★★★★</div>
+        <p>"Equisite hotels and stunning view! I was so happy."</p>
+        <strong>– Pansame T.</strong>
+      </div>
+      <div class="testimonial-box bg-white p-3 rounded shadow-sm min-width-300">
+        <div class="stars text-warning mb-2">★★★★☆</div>
+        <p>"Good Food facilities and all others are A1."</p>
+        <strong>– Susmita L.</strong>
+      </div>
+      <div class="testimonial-box bg-white p-3 rounded shadow-sm min-width-300">
+        <div class="stars text-warning mb-2">★★★★★</div>
+        <p>"Awesome hotels provided to us.."</p>
+        <strong>– Hazam A.M T.</strong>
+      </div>
+      
+      <!-- Add more -->
+    </div>
+  </div>
+</div>
+
+
+<!-- GALLERy Explore -->
+<div class="container my-5">
+  <div class="gallery-section p-4 rounded-4 shadow position-relative overflow-hidden">
+    <div class="blur-bg"></div>
+    <h3 class="text-center mb-4">Hotel Photo Highlights</h3>
+    <div class="gallery-carousel d-flex gap-3 overflow-x-auto">
+      <img src="images/hero11.jpg" class="img-fluid rounded gallery-img" alt="Room 1" />
+      <img src="images/hero4.jpg" class="img-fluid rounded gallery-img" alt="Dining" />
+      <img src="images/hero7.jpg" class="img-fluid rounded gallery-img" alt="Room 1" />
+      <img src="images/hero1.jpg" class="img-fluid rounded gallery-img" alt="Pool" />
+      <img src="images/g6.jpg" class="img-fluid rounded gallery-img" alt="Dining" />
+      <img src="images/hero12.jpg" class="img-fluid rounded gallery-img" alt="Pool" />
+      <img src="images/aboutphotos/au1.jpg" class="img-fluid rounded gallery-img" alt="Pool" />
+      <img src="images/aboutphotos/au3.jpg" class="img-fluid rounded gallery-img" alt="Dining" />
+      <img src="images/aboutphotos/au8.jpg" class="img-fluid rounded gallery-img" alt="Pool" />
+
+      <!-- Add more -->
+    </div>
+  </div>
+</div>
+
+
+    <!-- ! Footer -->
+    <!--  FOOTER-1 -->
+
+    <footer id="footer1" class="custom-footer">
+  <div class="footer-bg-fade"></div>
+
+  <div class="footer-content container">
+    <h2>Get in touch</h2>
+
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h5>Phone</h5>
+        <p>+91 85100 66590, +91 85108 68612 </p>
+        <p>Sec-106, Main Dadri Road,<br>NSEZ, Bhangel, Noida 201304</p>
+      </div>
+      <div class="footer-col">
+        <h5>Email</h5>
+        <p>shakyag116@gmail.com</p>
+        <p>firstclick8510@gmail.com</p>
+
+        <h5>Follow Us</h5>
+        <div class="footer-social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-pinterest"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>RERA No:</h5>
+        <p>PBRERA-SAS79-PR0546</p>
+        <p>A project by : <strong>Priyanshu & Pankaj</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="footer-divider"></div> -->
+   </footer>
+
+   <!-- Footer-2 -->
+
+  <footer id="footer2" class="footer-main">
+  <div class="footer-top">
+    <div class="footer-col about">
+      <h4>About Us</h4>
+      <p>
+        PSparks™ offering Luxury, Premium + Affordable 1/2/3/4 BHK Comfort Hotels in All Over India with an Ultra Luxury Amenities & 5 Star Rated Club House.
+        #1 Construction Quality. ISO 9001 Plus Certified Hotels. New-Offers Avail from July-25. Know More ...
+      </p>
+    </div>
+
+    <div class="footer-col links">
+      <h4>Useful Links</h4>
+      <div class="link-group">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">Club Skylla</a></li>
+          <li><a href="#">Gallery</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Why choose us</a></li>
+          <li><a href="#">Site Plan</a></li>
+          <li><a href="#">Price List</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-col floor-plan">
+      <h4>Hotel Plan</h4>
+      <ul>
+        <li>Tourist Hotel</li>
+        <li>Night Stays Hotel</li>
+        <li>Day Stays Hotel</li>
+        <li>Luxuries Hotels</li>
+        <li>Average Budg Hotels</li>
+        <li>Family Hotels</li>
+      </ul>
+    </div>
+
+    <div class="footer-col contact">
+      <h4>Contact Us</h4>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> B-4, Sector-3, JSpiders, Noida</li>
+        <li><i class="fas fa-phone-alt"></i> +91 8510066590, +91 8510868612</li>
+        <li><i class="fas fa-envelope"></i> shakyag116@gmail.com, firstclick8510@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Terms & Conditions</a> |
+      Copyright © 2025 <strong>PSparks</strong>. All Right Reserved
+    </p>
+  </div>
+ </footer>
+
+
+ 
+
+
+
+
+  <!--! Request Button -->
+<button class="btn btn-lg btn-primary request-info" data-bs-toggle="modal" data-bs-target="#requestModal">
+    <i class="bi bi-envelope-fill me-2"></i> Request More Info
+</button>
+
+
+<!--! Request Info Modal -->
+<div class="modal fade" id="requestModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Get in Touch with Us</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p>Please select how you'd like to reach us:</p>
+        <div class="d-grid gap-2 mb-3">
+          <a href="https://wa.me/918510868612" class="btn btn-success" target="_blank">
+            <i class="bi bi-whatsapp me-2"></i> Chat with Priyanshu
+          </a>
+          <a href="https://wa.me/918510066590" class="btn btn-success" target="_blank">
+            <i class="bi bi-whatsapp me-2"></i> Chat with Pankaj
+          </a>
+        </div>
+        <hr>
+        <p>Call Us:</p>
+        <p>📞 +91 85108 68612 (Priyanshu) <br>📞 +91 85100 66590 (Pankaj)</p>
+        <hr>
+        <p>Email Us:</p>
+        <p>📧 <a href="mailto:shakyag116@gmail.com">shakyag116@gmail.com</a><br>
+           📧 <a href="mailto:firstclick8510@gmail.com">firstclick8510@gmail.com</a></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  <!-- Bootstrap + Custom JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" ></script>
+      <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+ 
+  <script src="js/video.js"></script>
+</body>
+</html>

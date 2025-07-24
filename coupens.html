@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Coupons & Deals | Hotel Booking</title>
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" />
+    <link
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+  rel="stylesheet"
+/>
+
+  <link rel="stylesheet" href="css/coupens.css"/>
+  <link rel="stylesheet" href="css/coupenmedia.css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+
+  <style>
+  .offer-item { display: block; } /* default block layout */
+</style>
+
+</head>
+<body>
+    <div class="background-blur"></div>
+
+   <!--! Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-transparent fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">PSparks</a>
+        <button
+          class="navbar-toggler text-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer2">Contact Us</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">Hotels</a></li>
+            <!-- <li class="nav-item"><a class="nav-link" href="coupens.html">Coupon & Delas</a></li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sign in</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+  <main class="container my-5 pt-5">
+
+    <!-- ! Coupens and Deals -->
+    <h1 class="mb-4 text-center">Exclusive Coupons & Deals</h1>
+
+    <!-- Filter By -->
+    <div class="filter-controls text-center mb-4">
+      <button class="btn btn-outline-primary mx-1 filter-btn active" data-filter="all">All</button>
+      <button class="btn btn-outline-primary mx-1 filter-btn" data-filter="coupon">Coupons</button>
+      <button class="btn btn-outline-primary mx-1 filter-btn" data-filter="deal">Deals</button>
+    </div>
+
+    <!-- Coupon & Deal Grid -->
+    <div class="row" id="offerGrid">
+      <!-- Example Coupon Item -->
+      <div class="col-md-4 mb-4 offer-item" data-type="coupon">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">SAVE20</h5>
+            <p class="card-text">Get 20% off on bookings over ₹5,000.</p>
+            <button class="btn btn-success copy-btn">Copy</button>
+          </div>
+        </div>
+      </div>
+       <div class="col-md-4 mb-4 offer-item" data-type="coupon">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">SAVE18</h5>
+            <p class="card-text">Get 18% off on bookings over ₹4,000.</p>
+            <button class="btn btn-success copy-btn">Copy</button>
+          </div>
+        </div>
+      </div>
+       <div class="col-md-4 mb-4 offer-item" data-type="coupon">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">SAVE35</h5>
+            <p class="card-text">Get 35% off on bookings over ₹7,999.</p>
+            <button class="btn btn-success copy-btn">Copy</button>
+          </div>
+        </div>
+      </div>
+      <!-- Example Deal Item -->
+      <div class="col-md-4 mb-4 offer-item" data-type="deal">
+        <div class="card h-100">
+          <img src="images/indexphotos/r16.jpg" class="card-img-top" alt="Weekend Deal"/>
+          <div class="card-body">
+            <h5 class="card-title">Weekend Special</h5>
+            <p class="card-text">Stay 5 Days, get 1 free weekend day!</p>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+         <div class="col-md-4 mb-4 offer-item" data-type="deal">
+        <div class="card h-100">
+          <img src="images/indexphotos/r18.jpg" class="card-img-top" alt="Weekend Deal"/>
+          <div class="card-body">
+            <h5 class="card-title">Weekend Special</h5>
+            <p class="card-text">Stay 3 nights, get 1 free weekend night!</p>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+         <div class="col-md-4 mb-4 offer-item" data-type="deal">
+        <div class="card h-100">
+          <img src="images/indexphotos/r17.jpg" class="card-img-top" alt="Weekend Deal"/>
+          <div class="card-body">
+            <h5 class="card-title">Weekend Special</h5>
+            <p class="card-text">Stay 2 nights, get 1 free weekend dinner!</p>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+     <!-- Example Coupon Item -->
+      <div class="col-md-4 mb-4 offer-item" data-type="coupon">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">SAVE20</h5>
+            <p class="card-text">Get 20% off on bookings over ₹5,000.</p>
+            <button class="btn btn-success copy-btn">Copy</button>
+          </div>
+        </div>
+      </div>
+       <div class="col-md-4 mb-4 offer-item" data-type="coupon">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">SAVE18</h5>
+            <p class="card-text">Get 18% off on bookings over ₹4,000.</p>
+            <button class="btn btn-success copy-btn">Copy</button>
+          </div>
+        </div>
+      </div>
+       <div class="col-md-4 mb-4 offer-item" data-type="coupon">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">SAVE35</h5>
+            <p class="card-text">Get 35% off on bookings over ₹7,999.</p>
+            <button class="btn btn-success copy-btn">Copy</button>
+          </div>
+        </div>
+      </div>
+    
+            <!-- Example Deal Item -->
+      <div class="col-md-4 mb-4 offer-item" data-type="deal">
+        <div class="card h-100">
+          <img src="images/indexphotos/r19.jpg" class="card-img-top" alt="Weekend Deal"/>
+          <div class="card-body">
+            <h5 class="card-title">Weekend Special</h5>
+            <p class="card-text">Stay 4 Days, get 1 free weekend lunch!</p>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+         <div class="col-md-4 mb-4 offer-item" data-type="deal">
+        <div class="card h-100">
+          <img src="images/indexphotos/r20.jpg" class="card-img-top" alt="Weekend Deal"/>
+          <div class="card-body">
+            <h5 class="card-title">Weekend Special</h5>
+            <p class="card-text">Stay 2 weeks, get 2 free weekend night + dinner!</p>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+         <div class="col-md-4 mb-4 offer-item" data-type="deal">
+        <div class="card h-100">
+          <img src="images/indexphotos/r21.jpg" class="card-img-top" alt="Weekend Deal"/>
+          <div class="card-body">
+            <h5 class="card-title">Weekend Special</h5>
+            <p class="card-text">Stay 3 Day and Night, get 2 free weekend night!</p>
+            <a href="#" class="btn btn-primary">Book Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add more items as needed -->
+    </div>
+  </main>
+
+  <!-- ! GALLERY CAROUSEl -->
+  
+  <section class="gallery-carousel-section py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Explore Our Gallery</h2>
+
+    <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <img src="images/g3.jpg" class="d-block w-100" alt="Gallery Image 1">
+        </div>
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <img src="images/g6.jpg" class="d-block w-100" alt="Gallery Image 2">
+        </div>
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <img src="images/g4.jpg" class="d-block w-100" alt="Gallery Image 3">
+        </div>
+         <!-- Slide 4 -->
+        <div class="carousel-item ">
+          <img src="images/g5.jpg" class="d-block w-100" alt="Gallery Image 4">
+        </div>
+        <!-- Slide 5 -->
+        <div class="carousel-item">
+          <img src="images/g6.jpg" class="d-block w-100" alt="Gallery Image 5">
+        </div>
+        <!-- Slide 6 -->
+        <div class="carousel-item">
+          <img src="images/g2.jpg" class="d-block w-100" alt="Gallery Image 6">
+        </div>
+        
+        <!-- Add more slides as needed -->
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+      <!-- Indicators -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3"></button>
+        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4"></button>
+        <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="5"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ! FOOTER-1 -->
+
+    <footer id="footer1" class="custom-footer">
+  <div class="footer-bg-fade"></div>
+
+  <div class="footer-content container">
+    <h2>Get in touch</h2>
+
+    <div class="footer-columns">
+      <div class="footer-col">
+        <h5>Phone</h5>
+        <p>+91 85100 66590, +91 85108 68612 </p>
+        <p>Sec-106, Main Dadri Road,<br>NSEZ, Bhangel, Noida 201304</p>
+      </div>
+      <div class="footer-col">
+        <h5>Email</h5>
+        <p>shakyag116@gmail.com</p>
+        <p>firstclick8510@gmail.com</p>
+
+        <h5>Follow Us</h5>
+        <div class="footer-social-icons">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-pinterest"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>RERA No:</h5>
+        <p>PBRERA-SAS79-PR0546</p>
+        <p>A project by : <strong>Priyanshu & Pankaj</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="footer-divider"></div> -->
+</footer>
+
+<!-- ! Footer-2 -->
+
+  <footer id="footer2" class="footer-main">
+  <div class="footer-top">
+    <div class="footer-col about">
+      <h4>About Us</h4>
+      <p>
+        PSparks™ offering Luxury, Premium + Affordable 1/2/3/4 BHK Comfort Hotels in All Over India with an Ultra Luxury Amenities & 5 Star Rated Club House.
+        #1 Construction Quality. ISO 9001 Plus Certified Hotels. New-Offers Avail from July-25. Know More ...
+      </p>
+    </div>
+
+    <div class="footer-col links">
+      <h4>Useful Links</h4>
+      <div class="link-group">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Location</a></li>
+          <li><a href="#">Club Skylla</a></li>
+          <li><a href="#">Gallery</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Why choose us</a></li>
+          <li><a href="#">Site Plan</a></li>
+          <li><a href="#">Price List</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-col floor-plan">
+      <h4>Hotel Plan</h4>
+      <ul>
+        <li>Tourist Hotel</li>
+        <li>Night Stays Hotel</li>
+        <li>Day Stays Hotel</li>
+        <li>Luxuries Hotels</li>
+        <li>Average Budg Hotels</li>
+        <li>Family Hotels</li>
+      </ul>
+    </div>
+
+    <div class="footer-col contact">
+      <h4>Contact Us</h4>
+      <ul>
+        <li><i class="fas fa-map-marker-alt"></i> B-4, Block-B, Sector-3, Noida 201301</li>
+        <li><i class="fas fa-phone-alt"></i> +91 8510066590, +91 8510868612</li>
+        <li><i class="fas fa-envelope"></i> shakyag116@gmail.com, firstclick8510@gmail.com</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Terms & Conditions</a> |
+      Copyright © 2025 <strong>PSparks</strong>. All Right Reserved
+    </p>
+  </div>
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/coupens.js" defer></script>
+</body>
+</html>
