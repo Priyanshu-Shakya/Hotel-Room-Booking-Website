@@ -1,0 +1,868 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+} 
+body {
+  height: calc(100vh - 70px); /* if your navbar is 70px tall */
+}
+  
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Full-screen hero */
+.hero {
+  position: relative;
+  height: 100vh;
+  /* background: url("../images/img2.jpg") no-repeat center center/cover; */
+  color: #fff;
+   background-size: cover;
+   background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 1s ease-in-out;
+}
+/* Overlay (optional darkening) */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+/*! Transparent navbar */
+/*! Navbar Custom Styling */
+.navbar-transparent {
+  background-color: rgba(91, 88, 88, 0.498);
+  margin-top: 0px;
+  height: 70px;
+  backdrop-filter: blur(11px);
+}
+.navbar-nav .nav-link {
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  padding: 8px 12px;
+    margin: 18px;
+
+  transition: all 0.3s ease;
+}
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #da9d41; /* Golden underline */
+  transition: width 0.3s ease;
+}
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #c59d5f; /* Golden text on hover/active */
+}
+.navbar-transparent .navbar-brand {
+  color: #fff;
+  font-weight: bold;
+}
+/*! Right-side Action buttons */
+.action-buttons {
+  /* position: absolute; */
+  top: 38%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 10000;
+   position: fixed;
+  bottom: 20px;   /* or 'top' if you want it at the top */
+  right: 20px;
+}
+
+.action-icon {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.action-icon .btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.action-icon .btn:hover {
+  animation: rotate360 0.6s linear 1;
+}
+
+/* Text label */
+.icon-label {
+  position: absolute;
+  right: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  color: #000;
+  padding: 6px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(-50%) translateX(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  font-size: 0.85rem;
+  pointer-events: none;
+}
+
+/* Show label on hover */
+.action-icon:hover .icon-label {
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
+}
+
+/* 360 rotation animation */
+@keyframes rotate360 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ! Home Book Date Place */
+.booking-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  border-radius: 12px;
+    /* background-color: rgba(91, 88, 88, 0.323) !important; */
+  background-color: rgba(169, 165, 165, 0.523) !important;
+  transition: all 0.3s ease;
+  z-index: 5;
+  backdrop-filter: blur(3px);
+
+}
+
+.booking-wrapper select,
+.booking-wrapper input[type="date"],
+.booking-wrapper .dropdown-toggle {
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+    background-color: #fff; /* ✅ White background */
+  border: 1px solid #ced4da; /* ✅ Light gray border */
+  color: #000; 
+}
+
+.booking-wrapper .form-control:hover,
+.booking-wrapper .dropdown-toggle:hover,
+.booking-wrapper select:hover {
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  border-color: #007bff;
+}
+.booking-wrapper #travellerSummary:hover {
+  background-color: #c59c5fbc; /*light semi-transparent*/
+}
+
+.dropdown-menu {
+  font-size: 0.9rem;
+  border-radius: 10px;
+}
+
+.btn-counter {
+  padding: 2px 8px;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.btn-counter:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .booking-wrapper .col-md-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .booking-wrapper .d-flex.gap-2 {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+
+
+/* !to move this traveller select section below the text */
+.hero-section {
+  /* background: url('../images/hero1.jpg') no-repeat center center/cover; */
+  padding: 120px 0;
+  position: relative;
+}
+
+.booking-container {
+  margin-top: -170px;
+  z-index: 3;
+  position: relative;
+  background-color: transparent;
+  
+}
+
+.booking-wrapper {
+  border-radius: 12px;
+}
+
+
+/* ! INFO CARD */
+.info-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px 5%;
+  background-color: #fff;
+  flex-wrap: wrap; /* keep for responsiveness */
+  margin-top: 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #fef7f1;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  
+  width: 32%;         /* ← Keep all cards in a row */
+  min-width: 280px;
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+.card img {
+  width: 40%;
+  object-fit: cover;
+}
+
+.card-text {
+  padding: 20px;
+  flex: 1;
+}
+
+.card-text h3 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.card-text a {
+  color: #1a73e8;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/* !! FOR SLO-MO Page or Section Loads */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* !!  Hotel Cards  !! */
+
+
+.deals-section {
+  padding: 20px;
+  background-color: #fff;
+}
+
+.deals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.deals-header h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.deals-header p {
+  margin: 5px 0 0;
+}
+
+.see-all {
+  background-color: #0071eb;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.deals-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.deal-card {
+  flex: 0 0 300px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  scroll-snap-align: start;
+  background-color: #fff;
+  position: relative;
+
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.deal-card:hover {
+  background-color: #f0f8ff; /* light blue or any color you want */
+  transform: translateY(-4px); /* optional lift effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* subtle shadow on hover */
+}
+
+.image-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image-carousel img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.nav-btn.left {
+  left: 10px;
+}
+.nav-btn.right {
+  right: 10px;
+}
+
+.rating {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.score {
+  background-color: #2a9d8f;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.deal-card h3 {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.location {
+  color: #666;
+  font-size: 14px;
+}
+
+.price {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.new-price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.total {
+  font-size: 13px;
+  color: #555;
+  margin-top: 5px;
+}
+
+.badge {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
+.deal-card .badge {
+  margin-top: auto;
+  left: 10px;
+  bottom: 2px;
+}
+
+.badge.discount {
+  background-color: #e63946;
+}
+
+.badge.member {
+  background-color: #6a1b9a;
+}
+
+/* Hotel card carousel-img */
+
+.carousel-img {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-img.active {
+  display: block;
+}
+
+
+
+/* !! Popular Destination */
+.destination-explore {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.destination-tabs {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.tab-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 20px;
+  background-color: #eee;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.tab-btn:hover {
+  background-color: #ddd;
+}
+
+.tab-btn.custom-active {
+  background-color: #4285f4;
+  color: white;
+}
+
+.destination-carousel-content {
+  display: none;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.destination-carousel-content.content-show {
+  display: flex;
+}
+
+.destination-card {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s;
+}
+
+.destination-card:hover {
+  transform: translateY(-5px);
+}
+
+.destination-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.destination-info {
+  padding: 10px;
+}
+
+.destination-price {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.destination-price span {
+  font-size: 12px;
+  color: gray;
+}
+
+
+.destination-card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.destination-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.destination-info {
+  padding: 10px;
+}
+
+.destination-price {
+  font-weight: bold;
+  color: #1a73e8;
+}
+
+/* !============================================================================================= */
+/* ! FOOTER-1  */
+
+.custom-footer {
+  position: relative;
+    background: linear-gradient(to bottom, rgb(255, 255, 255), rgb(30, 38, 51));
+  /* background-color: #1e2633; */
+  color: #ffffff;
+  padding: 40px 20px 20px; /* Tighter top & bottom */
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* Faded image in background */
+.footer-bg-fade {
+  background: url('../images/footer-fade.jpg') no-repeat center top;
+  background-size: cover;
+  opacity: 0.09;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+
+.footer-content h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #c59c5fc5;
+}
+
+/* Footer column layout */
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+.footer-col {
+  flex: 1 1 280px;
+  font-size: 1rem;
+  min-width: 220px;
+}
+
+.footer-col h3 {
+  margin-bottom: 18px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: #41392f;
+  text-transform: uppercase;
+}
+
+.footer-col {
+  margin: 6px 0;
+  line-height: 1.6;
+  font-size: 0.96rem;
+}
+.footer-col h5{
+  color: #41392f;
+}
+
+/* Social section */
+.footer-social-icons {
+  display: flex;
+  gap: 18px;
+  margin-top: 12px;
+  font-size: 1.4rem;
+}
+
+.footer-social-icons i {
+  color: #ffffff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-social-icons i:hover {
+  color: #c59d5f;
+}
+
+/* Divider */
+.footer-divider {
+  height: 1px;
+  background-color: #ffffff26;
+  margin-top: 40px;
+}
+
+/* ! FOOTER-2 */
+
+.footer-main {
+ /* background-color: #1e2633; */
+   background: linear-gradient(to bottom, rgba(30, 38, 51, 0.934), rgba(30, 38, 51, 1));
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 50px 20px 20px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  flex: 1 1 220px;
+  min-width: 200px;
+}
+
+.footer-col h4 {
+  color: #c59d5f;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-col p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.footer-col ul li i {
+  margin-right: 10px;
+  color: #c59d5f;
+}
+
+/* Links */
+.footer-col a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col a:hover {
+  color: #c59d5f;
+}
+
+/* Two-column links under "Useful Links" */
+.footer-col.links .link-group {
+  display: flex;
+  gap: 30px;
+}
+
+/* Bottom bar */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #ddd;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+.footer-bottom a:hover {
+  color: #c59d5f;
+}
+
+
+
+
+
+
+
+
+
+/* TODO:  LATER CSS ADDES FOR SOME FEATURES ======================================================================*/
+/* TODO:  LATER CSS ADDES FOR SOME FEATURES ======================================================================*/
+/* 
+
+/* !alert popup for no search result found */
+.interactive-alert {
+  display: flex;
+  align-items: center;
+  background-color: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  padding: 2px 4px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  font-size: 15px;
+  gap: 10px;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+.interactive-alert i {
+  font-size: 20px;
+}
+.interactive-alert.fade-out {
+  opacity: 0;
+}
+
+@keyframes fadeInAlert {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* !whatsapp action button popup */
+.whatsapp-popup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  animation: popupFadeIn 0.4s ease-in-out;
+}
+
+.popup-content h5 {
+  margin-bottom: 10px;
+}
+
+.contact-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.whatsapp-contact {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  background: #e9f9ee;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.whatsapp-contact:hover {
+  background: #d4f3de;
+}
+
+.whatsapp-contact img {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.whatsapp-contact div {
+  text-align: left;
+}
+
+.close-popup {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #888;
+}
+
+@keyframes popupFadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}

@@ -1,0 +1,261 @@
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 60px; /* adjust to match your navbar height */
+    right: 20px;
+    backdrop-filter: blur(800px);
+    background-color: rgba(210, 208, 208, 0.826); /*light semi-transparent*/
+    width: max-content;
+    min-width: 200px;
+    /* padding: 15px; */
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .navbar-collapse .nav-link {
+    color: #000 !important;
+    padding: 8px 12px;
+    display: block;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    margin: 4px 0;
+    line-height: 1.2;
+
+  }
+
+  .navbar-collapse .nav-link:hover {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    color: #c59d5f !important;
+  }
+}
+
+/* ! for white colour hamburg button */
+@media (max-width: 991.98px) {
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
+  }
+}
+
+/* ! Hero content and Action Buttons for only Mobie view */
+@media (max-width: 991.98px) {
+  /* Smaller hero text */
+  .hero-content h1 {
+    font-size: 1.8rem; /* Smaller headline */
+    line-height: 1.3;
+  }
+
+  .hero-content p {
+    font-size: 0.85rem;
+  }
+
+  .hero-content .btn-group .btn {
+    font-size: 0.85rem;
+    padding: 8px 16px;
+  }
+
+  /* Smaller side action buttons */
+  .action-icon .btn {
+    width: 40px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+
+  .icon-label {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+
+  /* Space between hero content and action buttons */
+  .hero {
+    padding-right: 70px; /* Adds space so content doesn't overlap with side icons */
+  }
+
+  .action-buttons {
+    right: 10px; /* Keep them on right but slightly tighter */
+  }
+}
+@media screen and (max-width: 768px) {
+  .action-buttons {
+    margin-top: 100px; /* ⬅️ Increase the bottom spacing */
+  }
+}
+
+/* ! Make booking Box responsive for tablet and mobile view and placed after the HeroSlider*/
+@media (max-width: 768px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-section {
+    order: 1;
+  }
+
+  .info-cards {
+    order: 2;
+  }
+
+  .booking-container {
+    order: 3;
+    margin-top: 24px;
+  }
+}
+
+
+/* !  Info cards */
+/* Mobile view: stacked layout */
+@media (max-width: 426px) {
+  .info-cards {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .card {
+    flex-direction: row;
+    align-items: stretch;
+    height: auto;
+    width: 90%;
+  }
+
+  .card img {
+    width: 40%;
+    height: auto;
+    border-radius: 0 16px 16px 0;
+  }
+
+  .card-text {
+    padding: 16px;
+  }
+}
+
+/* Tablet view (426px - 768px): keep row layout, just reduce size */
+@media (min-width: 426px) and (max-width: 768px) {
+  .info-cards {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .card {
+    height: 140px;
+    width: 30%; /* Adjust as per spacing */
+  }
+
+  .card img {
+    width: 50%;
+    border-radius: 0 16px 16px 0;
+  }
+
+  .card-text {
+    padding: 12px;
+  }
+}
+
+
+/* ! Hotel Cards */
+
+@media (max-width: 600px) {
+  .see-all {
+    font-size: 12px; /* smaller for mobile screens */
+  }
+}
+
+
+/* ! FOOTER -1 Responsive */
+/* RESPONSIVE - Tablet */
+@media screen and (max-width: 992px) {
+  .footer-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .footer-columns {
+    gap: 32px;
+  }
+}
+
+/* RESPONSIVE - Mobile */
+@media screen and (max-width: 768px) {
+  .custom-footer {
+    padding: 40px 16px 20px;
+    text-align: center;
+  }
+
+  .footer-content h2 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+
+  .footer-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .footer-col {
+    flex: 1 1 100%;
+    font-size: 0.95rem;
+  }
+
+  .footer-social-icons {
+    justify-content: center;
+    margin-top: 12px;
+    gap: 16px;
+  }
+
+  .footer-col h5 {
+    margin-top: 16px;
+  }
+
+  .footer-divider {
+    margin-top: 24px;
+  }
+}
+
+/* Responsive Layout Adjustments */
+@media screen and (max-width: 992px) {
+  .footer-content h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .footer-columns {
+    gap: 32px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-social-icons {
+    justify-content: center;
+  }
+}
+
+
+/* !Footer-2 Responsice  */
+/* Responsive Styles */
+@media screen and (max-width: 992px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-col.links .link-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+    padding: 20px 10px 0;
+  }
+}
