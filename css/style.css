@@ -948,3 +948,129 @@ html {
   from { opacity: 0; transform: scale(0.9); }
   to   { opacity: 1; transform: scale(1); }
 }
+
+
+/* ! Pricing Table section in action sidebar buttons */
+#pricingSection {
+  background: linear-gradient(145deg, rgba(3, 4, 94, 0.9), rgba(0, 119, 182, 0.8));
+  backdrop-filter: blur(12px);
+  padding: 60px 20px;
+  margin-top: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  animation: slideIn 1s ease-in-out forwards;
+}
+
+.pricing-title {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+  transform: perspective(600px) rotateY(-5deg);
+  animation: floatUp 1.2s ease-out;
+}
+
+.table-blue thead {
+  background: #007bff;
+  color: white;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+  font-weight: 500;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.close-pricing {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  z-index: 10;
+}
+.modal-note {
+  color: #555;
+  font-style: italic;
+  font-size: 14px;
+  margin-top: 15px;
+  display: block;
+  text-align: center;
+}
+.table-responsive {
+  max-height: 400px; /* Control vertical height */
+  overflow-y: auto;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.table-responsive thead th {
+  position: sticky;
+  top: 0;
+  background-color: #007bff;
+  color: white;
+  z-index: 2;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatUp {
+  from {
+    transform: translateY(60px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+/* for model view of this table */
+.bg-blur {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(204, 243, 255, 0.85));
+  backdrop-filter: blur(14px);
+  border-radius: 12px;
+  box-shadow: 0 0 35px rgba(0, 0, 0, 0.15);
+  color: #333;
+}
+
+.table thead {
+  background: #00c6ff; /* Aqua Blue */
+  color: #fff;
+}
+
+.table td,
+.table th {
+  background-color: rgba(255, 255, 255, 0.85);
+  color: #333;
+}
+
+.pricing-title {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #007c91;
+  text-shadow: 0 1px 4px rgba(0, 124, 145, 0.2);
+  animation: floatUp 1s ease-out;
+}
+
+.btn-close-blue {
+    filter: invert(34%) sepia(71%) saturate(2921%) hue-rotate(194deg) brightness(93%) contrast(96%);
+  }
+
+@keyframes floatUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
