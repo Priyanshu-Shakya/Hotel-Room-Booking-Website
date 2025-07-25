@@ -325,3 +325,30 @@ document.addEventListener("DOMContentLoaded", () => {
     if (e.target === popup) popup.classList.add("d-none");
   });
 });
+
+
+// ! For pricing table action side bar button
+document.addEventListener("DOMContentLoaded", function () {
+  const pricingBtn = document.querySelector(".action-buttons .btn-info");
+  const pricingSection = document.getElementById("pricingSection");
+  const closePricing = document.querySelector(".close-pricing");
+
+  pricingBtn.addEventListener("click", () => {
+    pricingSection.classList.remove("d-none");
+    pricingSection.scrollIntoView({ behavior: "smooth" });
+  });
+
+  closePricing.addEventListener("click", () => {
+    pricingSection.classList.add("d-none");
+  });
+});
+
+// model view of this table
+document.addEventListener("DOMContentLoaded", function () {
+  const pricingBtn = document.querySelector(".action-buttons .btn-info");
+
+  pricingBtn.addEventListener("click", () => {
+    const pricingModal = new bootstrap.Modal(document.getElementById("pricingModal"));
+    pricingModal.show();
+  });
+});
