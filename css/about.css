@@ -130,10 +130,43 @@ body {
   padding: 40px 20px;
 }
 
+
 .about-intro h2 {
-  font-weight: bold;
-  color: #343a40;
+  font-weight: 900;
+  font-size: 2.8rem;
+  color: #004d7a;
+  text-transform: uppercase;
+  text-align: center;
+  text-shadow:
+    1px 1px 0 #ccc,
+    2px 2px 0 #bbb,
+    3px 3px 0 #aaa,
+    4px 4px 0 #999,
+    5px 5px 15px rgba(0, 0, 0, 0.3);
+  transform: perspective(800px) rotateX(10deg);
+  animation: fadeFloat 2s ease-out;
 }
+@keyframes fadeFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) rotateX(45deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateX(10deg);
+  }
+}
+@media (max-width: 576px) {
+  .about-intro h2 {
+    font-size: 1.8rem;
+    transform: perspective(600px) rotateX(6deg);
+    text-shadow:
+      1px 1px 0 #ccc,
+      2px 2px 0 #bbb,
+      3px 3px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
 
 .about-intro p {
   max-width: 700px;
