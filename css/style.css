@@ -609,6 +609,45 @@ html {
 }
 
 
+/* ! FAQ Section */
+
+.faq-section {
+  /* background: #f7f9fc; */
+  background: #e9ecef;
+  border-top: 3px solid #4ca1af;
+  border-radius: 8px;
+}
+
+.accordion-button {
+  font-weight: 600;
+  color: #004085;
+  background-color: #f7f9fc;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #007bff;
+  color: white;
+  box-shadow: none;
+}
+
+.accordion-body {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #343a40;
+}
+
+.accordion-item {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: #80bdff;
+}
+
 /* !============================================================================================= */
 /* ! FOOTER-1  */
 
