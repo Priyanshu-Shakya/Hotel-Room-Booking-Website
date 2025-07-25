@@ -211,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Validate inputs
     if (!location || !startDate || !endDate) {
       // alert("Please select location and dates.");
-    showSearchAlert("Please select a <strong>location</strong> and <strong>dates</strong> to search hotels.");
+    showSearchAlert("Please select a <strong>location</strong> and <strong> both dates</strong> to search hotels.");
 return;
 
       // return;
