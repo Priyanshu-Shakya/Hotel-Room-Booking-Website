@@ -568,6 +568,47 @@ html {
   color: #1a73e8;
 }
 
+
+/* ! App Download with QR */
+
+.app-download-section {
+  background: linear-gradient(to right, #2c3e50, #4ca1af);
+  border-radius: 20px;
+  margin: 50px auto;
+  padding: 40px 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.qr-box .qr-img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.qr-box:hover .qr-img {
+  transform: scale(1.1);
+}
+
+.animated-text {
+  animation: floatIn 1.5s ease-out forwards;
+  transform: perspective(1000px) rotateY(-5deg);
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+@keyframes floatIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) rotateY(-20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) rotateY(0deg);
+  }
+}
+
+
 /* !============================================================================================= */
 /* ! FOOTER-1  */
 
