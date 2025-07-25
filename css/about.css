@@ -205,20 +205,35 @@ body {
   margin-top: 20px; /* pushes services below thumbnails */
 }
 .profile-card {
-  background-color: #ffffff;
+  position: relative;
   border: 1px solid #ddd;
   border-radius: 10px;
   padding: 20px;
   height: 100%;
-  transition: all 0.3s ease-in-out;
+  background: linear-gradient(120deg, #c0c6f5c8 25%, #a0f4c2c1 50%, #f8c77eb1 75%);
+  background-size: 200% 100%;
+  animation: cardShine 4s linear infinite;
+  transition: all 0.9s ease-in-out;
+  overflow: hidden;
 }
 
+
 .profile-card:hover {
-  background-color: #f0f8ff; /* soft blue */
+  animation-play-state: paused;
+  background: #f0f8ff; /* Stops animation and applies hover color */
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   transform: translateY(-5px);
   border-color: #c2e7ff;
 }
+@keyframes cardShine {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
 .profile-img {
   width: 180px;
   height: 260px;
@@ -228,6 +243,8 @@ body {
   margin: 0 auto 15px auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+
+/*footer  */
 footer {
   background: #343a40;
   color: #fff;
