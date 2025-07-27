@@ -1,0 +1,208 @@
+
+
+/* Always vertical stack layout */
+#resultsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+/* Individual hotel card */
+.hotel-card {
+  display: flex;
+  gap: 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.hotel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hotel-card img {
+  width: 240px;
+  height: auto;
+  object-fit: cover;
+}
+
+.hotel-info {
+  padding: 16px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hotel-info h4 {
+  font-size: 18px;
+  margin: 0 0 6px 0;
+}
+
+.rating {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-weight: bold;
+  font-size: 20px;
+  color: #1a73e8;
+}
+
+.old-price {
+  text-decoration: line-through;
+  font-size: 14px;
+  color: #888;
+  margin-left: 10px;
+}
+
+.total {
+  font-size: 14px;
+  color: #666;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-top: 10px;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.badge.bg-danger {
+  background-color: #e63946;
+  color: white;
+}
+
+.badge.bg-success {
+  background-color: #2a9d8f;
+  color: white;
+}
+
+/* Responsive tweaks for small devices */
+@media (max-width: 576px) {
+  .hotel-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hotel-card img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .hotel-info {
+    align-items: center;
+  }
+}
+
+/* add some content in every card */
+
+.hotel-card {
+  display: flex;
+  gap: 20px;
+  background: #fff;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.hotel-card img {
+  width: 250px;
+  object-fit: cover;
+}
+
+.hotel-info {
+  padding: 15px 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Make info & highlights side by side */
+@media (min-width: 768px) {
+  .hotel-info {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .main-info {
+    flex: 2;
+  }
+
+  .card-highlights {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #444;
+  }
+
+  .card-highlights ul {
+    margin: 0;
+    padding-left: 18px;
+  }
+
+  .card-highlights li {
+    margin-bottom: 6px;
+  }
+}
+
+/* Stack normally on mobile */
+@media (max-width: 767px) {
+  .card-highlights {
+    /* display: none; */
+    
+  }
+  .hotel-card img{
+    width: 100%;
+    height: 200px;
+  }
+}
+
+
+.css-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+#noResultModal:checked ~ .css-modal {
+  display: flex;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+}
+
+.modal-content .close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  color: #888;
+  cursor: pointer;
+}

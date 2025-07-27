@@ -1,0 +1,194 @@
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #f9f9f9, #e1f5fe);
+      color: #333;
+    }
+
+    
+/*! Transparent navbar */
+/*! Navbar Custom Styling */
+.navbar-transparent {
+  background-color: rgba(91, 88, 88, 0.498);
+  margin-top: 0px;
+  height: 70px;
+  backdrop-filter: blur(11px);
+}
+.navbar-nav .nav-link {
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  padding: 8px 12px;
+    margin: 18px;
+
+  transition: all 0.3s ease;
+}
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #da9d41; /* Golden underline */
+  transition: width 0.3s ease;
+}
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #f5a52ef8; /* Golden text on hover/active */
+}
+.navbar-transparent .navbar-brand {
+  color: #fff;
+  font-weight: bold;
+}
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.nav-btn.left {
+  left: 10px;
+}
+.nav-btn.right {
+  right: 10px;
+}
+/* !for hamburg  */
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 60px; /* adjust to match your navbar height */
+    right: 20px;
+    backdrop-filter: blur(800px);
+    background-color: rgba(210, 208, 208, 0.826); /*light semi-transparent*/
+    width: max-content;
+    min-width: 200px;
+    /* padding: 15px; */
+    padding: 10px 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+
+  .navbar-collapse .nav-link {
+    color: #000 !important;
+    padding: 8px 12px;
+    display: block;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    margin: 4px 0;
+    line-height: 1.2;
+
+  }
+
+  .navbar-collapse .nav-link:hover {
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    color: #c59d5f !important;
+  }
+}
+
+/* ! for white colour hamburg button */
+@media (max-width: 991.98px) {
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' /%3E%3C/svg%3E");
+  }
+}
+
+
+    .why-choose-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .why-choose-section h2 {
+      font-size: 2.5rem;
+      margin-top: 30px;
+      margin-bottom: 10px;
+      color: #003366;
+    }
+
+    .why-choose-section p.subtitle {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 50px;
+      animation: fadeInSlide 1.2s ease forwards;
+    }
+
+    .features-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .feature-box {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      width: 300px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      position: relative;
+    }
+
+    .feature-box:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+    }
+
+    .feature-box i {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+      color: #00bcd4;
+      animation: glowPulse 2.5s ease-in-out infinite;
+    }
+
+    .feature-box h4 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: #003366;
+    }
+
+    .feature-box p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    @keyframes glowPulse {
+      0%, 100% {
+        text-shadow: 0 0 8px rgba(0,188,212,0.4);
+      }
+      50% {
+        text-shadow: 0 0 20px rgba(0,188,212,0.8);
+      }
+    }
+
+    @keyframes fadeInSlide {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .feature-box {
+        width: 100%;
+      }
+    }
